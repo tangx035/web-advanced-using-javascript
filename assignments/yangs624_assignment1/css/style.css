@@ -51,27 +51,26 @@ table {
 
 .all-grids {
    background-image: ur("../img/modular-grid.png"),
-      linear-gradient(90deg, rgb(200,0,0,0.2) 60px, transparent 0px),
+      background-image: url("../img/modular-grid.png"), linear-gradient(90deg, rgba(200, 0, 0, 0.2) 60px, transparent 0px), linear-gradient(0deg, transparent 95%, rgba(56, 255, 255, 0.8) 100%);
    background-position: center top, 0% 0%, 0% 0%;
-   background-size: 100px, 100%, 100% 24px;
+   background-size: 80px, 100%, 100% 24px;
    background-attachment: scroll, fixed, fixed;
    background-repeat: no-repeat, no-repeat, no-repeat;
    background-color: transparent, transparent, transparent;
 }
 
 .modular-grid {
-   background-image: linear-gradient(90deg, rgb(200,0,0,0.2) 60px, transparent 0px),
-      linear-gradient(0deg, rgba(0, 0, 0, 0) 95%, transparent 100%);
+   background-image: linear-gradient(90deg, rgba(200, 0, 0, 0.2) 60px, transparent 0px), linear-gradient(0deg, transparent 95%, rgba(56, 255, 255, 0.8) 100%);
    background-size: 80px 100%, 100% 24px;
 }
 
 .column-grid {
-   background-image: linear-gradient(90deg, rgb(200,0,0,0.2) 60px, transparent 0px);
+   background-image: linear-gradient(90deg, rgba(200, 0, 0, 0.2) 60px, transparent 0px);
    background-size: 80px 100%;
 }
 
 .baseline-grid {
-   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0) 95%, rgb(56,255,255,0.8) 100%);
+   background-image: linear-gradient(0deg, transparent 95%, rgba(56, 255, 255, 0.8) 100%);
    background-size: 100% 24px;
 }
 
@@ -86,18 +85,16 @@ table {
 
 
 body{
-  max-width:760px;
+  max-width:960px;
 }
 
 #large-banner-image{
-  margin:0 auto;
   position:absolute;
   width:1280px;
   height:672px;
 }
 
 #focus{
-  margin:0 auto;
   position:absolute;
   width:60px;
   margin-left:520px;
@@ -108,15 +105,15 @@ body{
 #arrow{
   margin:0 auto;
   position:absolute;
-  width:45px;
-  margin-left:600px;
-  margin-top:300px;
+  width:42px;
+  margin-left:640px;
+  margin-top:310px;
 }
 
 header h1{
   position:absolute;
   margin-left:600px;
-  margin-top:117.6px;
+  margin-top:118px;
   font-size:56px;
   font-family:"Pacifico", cursive;
 }
@@ -133,72 +130,122 @@ header p{
   margin:0 auto;
   align-items: center;
   position: absolute;
-  margin-left:445px;
-  margin-top:342px;
+  margin-left:510px;
+  padding-top:340px;
+  z-index: 2;
 }
+
+#iphone img{
+  width:300px;
+}
+
 
 #feature-1{
   margin:0 auto;
   position: absolute;
-  margin-left: 160px;
+  padding-left: 160px;
   padding-top:720px;
+  text-align:justify;
 }
 
 #feature-2{
   margin:0 auto;
   position: absolute;
-  width: 960px;
-  margin-left: 720px;
-  margin-right: 160px;
-  padding-top:720px;
+  padding-left:860px;
+  padding-right:60px;
+  padding-top: 720px;
+  text-align:justify;
 }
 
 .til{
   padding-top:7.2px;
-  padding-bottom: 19.2px;
-  font-size:24px;
+  font-size:20px;
   font-family: "Raleway", sans-serif;
   font-weight: 600;
+  padding-bottom: 20px;
   
 }
 
 .sente{
   padding-top:7.2px;
   padding-bottom: 19.2px;
-  font-size: 18px;
+  font-size: 14px;
   font-family: "Raleway", sans-serif;
   font-weight:300;
+  padding-bottom:42px;
   
 }
 
+.text-1{
+  margin:0 auto;
+  position: relative;
+  max-width:300px;
+}
 
-#container-in{
+.text-2{
+  margin:0 auto;
+  position: relative;
+  max-width:300px;
+}
+
+.text-3{
+  margin:0 auto;
+  position: relative;
+  max-width:300px;
+}
+
+.text-4{
+  margin:0 auto;
+  position: relative;
+  max-width:300px;
+}
+
+
+
+.get-app{
+  margin:0 auto;
+  background-color: #e3e3e3;
+  position:relative;
+  width:1280px;
+  height:360px;
+  top:1000px;
+}
+
+.text_app{
   margin:48px auto;
-  position:absolute;
-  width:600px;
-  padding-left: 80px;
-  padding-right: 80px;
+  position: absolute;
+  padding-left: 120px;
+  width:500px;
 }
 
 .video{
   margin:48px auto;
   float:right;
-  padding-right:100px;
+  padding-right:120px;
+}
+
+.video img{
+  width:430px;
 }
 
 .icons{
-  margin:216px auto;
+  margin:180px auto;
   position:absolute;
-  padding-left: 80px;
-  padding-right:10px;
+  padding-left: 117.2px;
+  z-index: 2;
 }
 
-#quotes{
-  margin:48px auto;
+.icons img{
+  width:65px;
+}
+
+.quotes{
+  position:absolute;
+  margin:50px auto;
   width:900px;
   text-align: center;
   padding-left:200px;
-  padding-right: 1000px;
+  padding-top:1000px;
 }
 
 .quote{
@@ -206,55 +253,71 @@ header p{
   font-weight: 300px;
   font-family: "Raleway", sans-serif;
   text-align: center;
+  height:35px;
 }
 
-.name{
-  font-size: 24px;
-  font-weight: 600px;
+.kyle{
+  font-size: 14px;
+  font-weight: 300px;
   font-family: "Raleway", sans-serif;
   text-align: center;
 }
 
 span{
-  font-weight: 300;
+  font-weight: 600;
 }
 
-.people-wall{
-  position:absolute;
-  margin-top:20px;
+/*.people-wall{
+  position:relative;
+  margin-top:520px;
+  width:1280px;
+}*/
+
+.people{
+  margin:0 auto;
+  position:relative;
+  padding-top:1150px;
   width:1280px;
 }
 
-#people{
+.active{
   position:absolute;
-  padding-top:20px;
-  width:1280px;
-}
-
-#active{
-  position:absolute;
-  margin-top:80px;
-  margin-left:920px;
-  z-index:2;
+  top:1578px;
+  margin-left:732px;
+  width:63px;
+  z-index:3;  
 }
 
 #bottom-sentence{
-  margin:0 auto;
-  width:780px;
+  margin:36px auto;
+  width:800px;
+  height:54px;
   padding-left:240px;
-  padding-bottom:48px;
   text-align:center;
 }
 
-.social-icons img{
-
-}
-
-#footer >li{
+.social-icons{
   margin:0 auto;
-  color:#939393;
-  position:absolute;
-  text-align:center;
-  width:1280px;
-  height:120px;
+  padding-left:530px;
+}
+
+#footer{
+ margin:48px auto;
+ background-color: #e3e3e3;
+ position: absolute;
+ height:130px;
+ width:1280px;
+ text-align:center;
+}
+
+#box{
+  width:650px;
+  margin-left:260px;
+}
+
+#footer li{
+  margin-top:50px;
+  list-style:none;
+  float:right;
+  padding-right:30px;
 }
