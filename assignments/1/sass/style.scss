@@ -1,1 +1,256 @@
 @import 'reset';
+@import 'variables';
+@import 'grid';
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+$font-size: 16px;
+$column-width: 60px;
+$gutter-width: 20px;
+$gutterColumn-width: 80px;
+$leading-height: 1.5 * $font-size; 
+$heading-color: #262626;
+
+h1{
+	font-family: 'Pacifico', cursive;
+	font-size: $leading-height * 2.5;
+	color: #000;
+}
+
+h2{
+	font-family: 'Raleway', sans-serif;
+	font-weight: 300;
+	font-size: $leading-height * 1.5;
+	color: #000; 
+}
+
+h3{
+	font-family: 'Raleway', sans-serif;
+	font-weight: 600;
+	font-size: $leading-height;
+	color: $heading-color;
+	padding-bottom: $leading-height;
+}
+
+p{
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+	font-size: $leading-height / 1.7;
+	color: #595959;
+	line-height: $leading-height * 1;
+}
+
+#top-banner{
+	background-image: url(../img/large-banner-image.png);
+	background-repeat: none;
+	margin: 0 auto;
+	width:100vw;
+	height: 700px;
+}
+
+#logos{
+	width: $gutterColumn-width * 10;
+}
+
+#focus-icon{
+	position: absolute;
+	top: $leading-height * 4.9;
+	left: $gutterColumn-width * 7.5;
+	display: inline;
+}
+
+#main-title{
+	position: absolute;
+	top: $leading-height * 5;
+	left: $gutterColumn-width * 8.6;
+	text-align: center;
+	display: inline;
+}
+
+
+#tagline{
+	position: absolute;
+	top: $leading-height * 10;
+	left:$gutter-width * 20;
+	text-align: center;
+}
+
+
+#arrow{
+	position: absolute;
+	margin: 0 auto;
+	top: $gutter-width * 16.5;
+	left: $gutter-width * 34.7;
+}
+
+#features{
+	position: relative;
+	width: 100vw;
+	height: $leading-height * 20.8;
+}
+
+#iphone{
+	position: absolute;
+	top: $gutter-width * 20.2;
+	left:$gutter-width * 27;
+	z-index:10;
+}
+
+#feature-1{
+	position: absolute;
+	top: $leading-height * 2;
+	left: $column-width  * 3 + $gutter-width / 2;
+	width: $column-width * 4.5 + $gutter-width;
+}
+
+#feature-2{
+	position: absolute;
+	top: $leading-height * 10;
+	left: $column-width  * 3 + $gutter-width / 2;
+	width: $column-width * 4.5 + $gutter-width;
+}
+
+#feature-3{
+	position: absolute;
+	top: $leading-height * 2;
+	left: $column-width  * 15.5 + $gutter-width;
+	width: $column-width * 4.5 + $gutter-width;
+}
+
+#feature-4{
+	position: absolute;
+	top: $leading-height * 10;
+	left: $column-width  * 15.5 + $gutter-width;
+	width: $column-width * 4.5 + $gutter-width;
+}
+
+#media{
+	width: 100vw;
+	height: $leading-height * 15.1;
+	background-image: url(../img/container.png);
+	background-repeat: none;
+	position: relative;
+	padding-top: $leading-height * 2.5;
+	padding-left: $gutterColumn-width * 1.5 + $gutter-width/2;
+}
+
+#media p{
+	width: $gutterColumn-width * 6.5;
+}
+
+#icons img{
+	position: relative;
+	display: inline;
+	padding-top: $leading-height;
+	padding-right: 13px;
+}
+
+#video{
+	position: absolute;
+	display: inline;
+	top: $leading-height;
+	right: $gutterColumn-width * 3.3;
+	width: 500px;
+	height: 307px;
+}
+
+#video-play-bar{
+	position: relative;
+	top: $leading-height * 12.2;
+	right: -25px;
+}
+
+#video-play-button{
+	position:relative;
+	top: $leading-height * 12.2;
+	display: inline;
+	left: $gutter-width;
+}
+
+#testimonials{
+	background-color: rgba(255,255,255,0.5);
+	width: 100vw;
+	height: $leading-height * 28;
+	padding-top: $leading-height * 2.5;
+	text-align: center;
+}
+
+#testimonials h3{
+	font-weight: 300;
+}
+
+#testimonials p{
+	line-height: $leading-height/2;
+}
+
+#collage{
+	position: relative;
+	background-image: url(../img/people.png);
+	background-repeat: none;
+	position: relative;
+	max-width: 100vw;
+	height: $leading-height * 13.2;
+	top:$leading-height * 2.2;
+}
+
+#collage img{
+	position: relative;
+	left: $gutterColumn-width * 2.93;
+	top: $leading-height * 3.3;
+}
+
+#in-touch{
+	position: relative;
+	margin-top: $leading-height * 5.3;
+}
+
+#in-touch h3{
+	font-weight: 600;
+}
+
+#in-touch p{
+	line-height: $leading-height * 1;
+}
+
+#social-media {
+	position: relative;
+	top: $leading-height/3.1;
+	display: inline;
+}
+
+#social-media img{
+	padding-right: 7.5px;
+}
+
+.footer{
+	background-color: #e3e3e3;
+	width: 100vw;
+	height: $leading-height * 3.7;
+	text-align: center;
+	padding-top: $gutter-width * 3.7; 
+}
+
+.footer span{
+	padding-right: $leading-height * 1.4;
+	display: inline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
