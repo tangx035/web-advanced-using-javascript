@@ -1,0 +1,48 @@
+// =============================================================================
+// Font Sizes and Leading
+// =============================================================================
+$font-size-base        : 16px;
+
+// =============================================================================
+// Grid Sizes
+// =============================================================================
+$grid-column       : 3.75 * $font-size-base;      // 60px
+$grid-gutter       : $grid-column / 3;            // 20px
+$grid-gutter-split : $grid-gutter / 2;            // 10px
+$grid-gutter-full  : $grid-column + $grid-gutter; // 80px
+$grid-leading      : 1.5 * $font-size-base;       // 24px
+
+// =============================================================================
+// Responsive Breakpoints
+// =============================================================================
+$width-small  : 736px;
+// $width-medium : 840px;
+$width-large  : 1280px;
+
+// =============================================================================
+// Project-Specific Variables
+// =============================================================================
+// overall width of both the menu and the body.
+$width-nav: 300px;
+$width-nav-item: ( $width-nav / 2 );
+$width-border: 2px;
+
+// This variable defines the uniform height of each nav item.
+$height-nav-item: 34px;
+
+// Colors
+$color-nav-links: #fff;
+$color-code-sample-link: #7d4793;
+$color-border: #21bde1;
+$color-foreground: #555;
+$color-background-nav: #f0ab3b;
+
+// The following variable is used in the anchor styled on line 62 of main.scss.
+// Increase the 0 to uniformly change the height of each inner nav item.
+//
+// $height-inner-list-items: ( $height-nav-item + 0 );
+
+$border-sides       : 1px solid #ddd;
+$width-floating     : 440px;
+$height-input-boxes : 40px;
+$color-background   : rgba(0,0,0,.5);
