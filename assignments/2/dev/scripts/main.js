@@ -36,11 +36,11 @@ window.onload = function () {
     var modalPanelContentClickHandler= function(e){
         e.stopPropagation();
         console.log('IN');
-    }
+    };
     var modalPanelClickHandler= function(e){
         e.stopPropagation();
         console.log('OUT');
-    }
+    };
 };
 
 
