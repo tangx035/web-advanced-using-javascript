@@ -29,6 +29,7 @@ nav {
       padding: 0;
       margin: 0;
       list-style-type: none;
+      visibility: hidden;
 
       > li {
          // Float each top-level list item (“Menu 1” and “Menu 2”) next to each
