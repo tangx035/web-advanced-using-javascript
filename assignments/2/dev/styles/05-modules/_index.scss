@@ -4,3 +4,20 @@
 // Smaller components, such as selector modifiers (classes, IDs, attribute selectors,
 // etc), belong here.
 //
+
+////////////////
+// MODAL SECTION
+////////////////
+.modal-panel{
+	position: fixed;
+	display: none;
+	z-index: 640;
+	width: 100vw;
+	height: 100vh;
+	top: 0px;
+	left: 0px;
+	opacity: 0.2; 
+	background:{
+		color: black;
+	}
+}
