@@ -1,6 +1,8 @@
 window.onload = function () {
     'use strict';
     
+    // ---------------- modal ---------------------
+
     // create elements for modal
     var blackModal = document.createElement('div');
     blackModal.id = 'backLayer';
@@ -27,8 +29,22 @@ window.onload = function () {
     }
     window.onkeydown = function(e){
         if(e.keyCode == 27){
-            blackModal.style.display = 'none';
-            innerModal.style.display = 'none';	       
+            closeModal();	       
         }
     };
+
+    // ---------------- navigation ---------------------
+    var nav = document.querySelector('nav > ul');
+    nav.style.display = 'none';
+    var menudown = document.getElementsByTagName('li')[8];
+    menudown.addEventListener('click', showMenu, false);
+    menudown.addEventListener('click', hideMenu, false);
+
+    function showMenu(){
+        nav.style.display = 'block';
+    }
+
+    function hideMenu(){
+        nav.style.display = 'block';
+    }
 };
