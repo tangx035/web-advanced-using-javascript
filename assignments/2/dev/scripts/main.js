@@ -11,23 +11,24 @@ window.onload = function () {
     var modalButton = document.querySelector('#js-triggers li:last-of-type a');
     modalButton.addEventListener('click',function(e){
         e.preventDefault();
-        toggleModal();
+        toggleModal(true);
     },false);
 
 
     document.onkeydown = function(event){
     	if( 27 === event.keyCode ){
-            toggleModal();
+            toggleModal(false);
     	}
     };
-    var toggleModal = function(state){
-        if( !state ){
-            var modalPanel = document.querySelector('.modal-panel');
-            if( modalPanel.style.display === ''){
-                modalPanel.style.display = 'none';
-            }
-            var modalPanelContent = modalPanel.querySelector('.modal-content');
 
+    var toggleModal = function(state){
+        var modalPanel = document.querySelector('.modal-panel');
+        if( modalPanel.style.display === ''){
+            modalPanel.style.display = 'none';
+        }
+        var modalPanelContent = modalPanel.querySelector('.modal-content');
+        //handling the state and toggling
+        if( state === undefined || state === null ){
             // to avoid duplicates of click handler, remove them everytime 
             // that new one wants to get added
             modalPanelContent.removeEventListener('click',modalPanelContentClickHandler);
@@ -44,16 +45,26 @@ window.onload = function () {
                 document.body.classList.remove('modal-panel-is-open');
                 modalPanel.style.display = 'none';
             }
+        }else if( state === false ){//only closing
+            modalPanelContent.removeEventListener('click',modalPanelContentClickHandler);
+            modalPanel.removeEventListener('click',modalPanelClickHandler);
+            document.body.classList.remove('modal-panel-is-open');
+            modalPanel.style.display = 'none';
+        }else if ( state === true ){//only opening
+            modalPanelContent.addEventListener('click',modalPanelContentClickHandler,false);
+            modalPanel.addEventListener('click',modalPanelClickHandler,false);
+            document.body.classList.add('modal-panel-is-open');
+            modalPanel.style.display = 'flex';
         }
 
     };
     var modalPanelContentClickHandler= function(e){
         e.stopPropagation();
-        
     };
     var modalPanelClickHandler= function(e){
         e.stopPropagation();
-        toggleModal();        
+        toggleModal(false);        
+
     };
 };
 
