@@ -32,7 +32,7 @@ window.onload = function () {
     }
     myModal.addEventListener('click', exitModal, false);
 
-    //menu show and hide
+    //menu show and hide!
     var menu = document.getElementsByTagName('li')[8];
     function showMenu(){
         document.getElementsByTagName('ul')[0].style.visibility = 'visible';
@@ -40,6 +40,9 @@ window.onload = function () {
     }
     menu.addEventListener('click', showMenu, false);
 
-    function hiddenMenu(){}
+    function hiddenMenu(){
+        document.getElementsByTagName('ul')[0].style.visibility = 'visible';
+    }
+    menu.addEventListener('click', hiddenMenu, false);
 
 };
