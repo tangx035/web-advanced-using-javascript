@@ -8,10 +8,13 @@ window.onload = function () {
     document.onkeydown = function(event){
     	if( 27 === event.keyCode ){
     		var modalPanel = document.querySelector('.modal-panel');
-    		if( modalPanel.style.display == 'none')
+    		if( modalPanel.style.display == 'none'){
+    			document.body.classList.add('modal-panel-is-open');
     			modalPanel.style.display = 'block';
-    		else
+    		}else{
+    			document.body.classList.remove('modal-panel-is-open');
     			modalPanel.style.display = 'none';
+    		}
     		
     	}
     };
