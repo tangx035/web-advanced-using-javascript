@@ -60,8 +60,8 @@ nav {
                // change the value of $height-inner-list-items in _variables.scss to
                // modify the height and vertical alignment of each inner nav item.
                //
-               // line-height: ( $height-inner-list-items );
-               // height: ( $height-inner-list-items );
+               line-height: ( $height-inner-list-items );
+               height: ( $height-inner-list-items );
             }
          }
       }
