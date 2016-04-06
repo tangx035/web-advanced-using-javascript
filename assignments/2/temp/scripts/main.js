@@ -21,6 +21,7 @@ window.onload = function () {
     function showModal(){
         blackModal.style.display = 'block';
         innerModal.style.display = 'block';
+        hideMenu();
     }
     //function to close modal using escape key
     function closeModal(){
@@ -33,18 +34,93 @@ window.onload = function () {
         }
     };
 
-    // ---------------- navigation ---------------------
+    // ---------------- drop down ---------------------
     var nav = document.querySelector('nav > ul');
-    nav.style.display = 'none';
+    nav.style.position = 'absolute';
+    nav.style.marginTop = '-200px';
     var menudown = document.getElementsByTagName('li')[8];
     menudown.addEventListener('click', showMenu, false);
-    menudown.addEventListener('click', hideMenu, false);
+    
+    // ---------------- sidebar ---------------------
 
+    window.onresize = function(){
+        var width = window.innerWidth;
+        if(width < 736){
+            // console.log('dropping');
+            sideMenuHide();
+            menudown.addEventListener('click', sideMenuShow, false);
+            nav.addEventListener('mouseover', sideMenuShow, false);
+            nav.addEventListener('mouseout', sideMenuHide, false);
+        }
+        else{
+            console.log('rising');
+            hideMenu();
+            menudown.addEventListener('click', showMenu, false);
+            nav.addEventListener('mouseover', showMenu, false);
+            nav.addEventListener('mouseout', hideMenu, false);
+        }
+    };
     function showMenu(){
-        nav.style.display = 'block';
+        nav.style.position = 'absolute';
+        nav.style.marginTop = '0px';
+        nav.style.transition = 'all 500ms ease-in';
     }
 
     function hideMenu(){
-        nav.style.display = 'block';
+        nav.style.position = 'absolute';
+        nav.style.marginTop = '-200px';
+        nav.style.transition = 'all 500ms ease-out';
     }
+
+
+    function sideMenuShow(){
+        nav.style.marginTop = '0px';
+        nav.style.marginLeft = '0px';
+    }
+
+    // function sideMenuHide(){
+    //     nav.style.marginTop = '0px';
+    //     nav.style.marginLeft = '-1000px';
+    // }
+
+    // if (matchMedia) {
+    //     var breakpoint = window.matchMedia('(max-width: 736px)');
+    //     breakpoint.addListener(WidthChange);
+    //     WidthChange(breakpoint);
+    // }
+
+    // function WidthChange(breakpoint) {
+    //     if (breakpoint.matches) {
+    //         sideMenuHide();
+    //         menudown.addEventListener('click', sideMenuShow, false);
+    //         nav.addEventListener('mouseover', sideMenuShow, false);
+    //         nav.addEventListener('mouseout', sideMenuHide, false);
+
+    //     } else {
+    //         hideMenu();
+    //         menudown.addEventListener('click', showMenu, true);
+    //         nav.addEventListener('mouseover', showMenu, false);
+    //         nav.addEventListener('mouseout', hideMenu, false);
+    //         // menudown.addEventListener('click', si, false);
+    //     }
+    // }
+    
+    // function showSideMenu(){
+    //     nav.style.position = 'absolute';
+    //     nav.style.float = 'right';
+    //     nav.style.marginRight = '100px'
+    //     nav.style.transition = 'all 500ms ease-in';
+    // }
+    
 };
+var ddb = require('dynamodb').ddb({accessKeyId: '', secretAccessKey: ''});
+
+// console.log(ddb);
+
+ddb.listTable((), function(err, red){
+	console.log(res);
+});
+
+ddb.describeTable('April8', function(err, res){
+	console.log(res);
+});
