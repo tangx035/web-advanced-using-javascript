@@ -2,6 +2,7 @@
 // Font Sizes and Leading
 // =============================================================================
 $font-size-base        : 16px;
+$leading: 1.5 * $font-size-base;
 
 // =============================================================================
 // Grid Sizes
@@ -26,6 +27,7 @@ $width-large  : 1280px;
 $width-nav: 300px;
 $width-nav-item: ( $width-nav / 2 );
 $width-border: 2px;
+$padding: 1px;
 
 // This variable defines the uniform height of each nav item.
 $height-nav-item: 34px;
@@ -42,7 +44,7 @@ $color-background-nav: #f0ab3b;
 //
 // $height-inner-list-items: ( $height-nav-item + 0 );
 
-$border-sides       : 1px solid #ddd;
-$width-floating     : 440px;
-$height-input-boxes : 40px;
+// $border-sides       : 1px solid #ddd;
+// $width-floating     : 440px;
+// $height-input-boxes : 40px;
 $color-background   : rgba(0,0,0,.5);

@@ -1,19 +1,128 @@
 h1 {
-   font-size: 2rem;
-   margin: .67em 0;
-   clear: both;
+	position: fixed;
+   	font-size: 1rem;
+   	margin: .67em 0;
+   	clear: both;
+   	display: none;
 }
 
 h2 {
-   font-size: 1.5em;
-   margin: .75em 0;
+	position: absolute;
+	margin:{
+         left: 1 * $grid-gutter-full + $grid-column;
+         top: 1 * $leading; 
+    } 
+   	font-size: 1em;
+}
+
+main > h2:nth-of-type(2) {
+	margin:{
+         left: 4 * $grid-gutter-full;
+         top: -5 * $leading; 
+    } 
+}
+
+main > h2:nth-of-type(3) {
+	display: none;
+}
+
+
+
+h2:nth-of-type(3) {
+	position: absolute;
+	margin:{
+         left: 13 * $grid-gutter-full;
+         top: -4 * $leading; 
+    } 
+   	font-size: 1.5em;
+   // margin: .75em 0;
 }
 
 h3 {
-   font-size: 1.17em;
-   margin: .83em 0;
+	position: absolute;
+	margin:{
+		left: 1 * $grid-gutter;
+		top: 2 * $leading;
+	}
+   	font-size: 2em;
+   	text-align: center;
+   	// margin: .83em 0;
+   	transform: rotate(-90deg);
+   	width: 2 * $grid-gutter-full;
+}
+
+main > h3:nth-of-type(1) {
+	transform: rotate(0deg);
+	font-size: 1.5em;
+	margin:{
+         left: 10 * $grid-gutter-full;
+         top: -5 * $leading; 
+    } 
+}
+
+main > h3:nth-of-type(2) {
+	display:none;
 }
 
 a {
    text-decoration: none;
+}
+
+p {
+	position: relative;
+	margin:{
+         left: 1 * $grid-gutter-full + $grid-column;
+         top: 1.5 * $leading; 
+      } 
+   	font-size: 0.8em;
+   	text-align: justify;
+   	width: 4 * $grid-gutter-full;
+   	padding:{
+   		top: 2px;
+   	}
+}
+
+main > p:nth-of-type(2) {
+	font-size: 0.5em;
+	width: 2 * $grid-column + $grid-gutter;
+	margin:{
+         left: 4 * $grid-gutter-full;
+         top: -4 * $leading; 
+      } 
+}
+
+main > p:nth-of-type(1) {
+	font-size: 0.5em;
+	width: 2 * $grid-column + $grid-gutter;
+	margin:{
+         // left: 5 * $grid-gutter-full;
+         top: 2 * $leading; 
+      } 
+}
+
+body > main > section:nth-of-type(3) {
+	margin:{
+         left: 6 * $grid-gutter-full - $grid-column;
+         top: -22.6 * $leading;  
+      } 
+}
+
+body > main > section:nth-of-type(4) {
+	margin:{
+         left: 6 * $grid-gutter-full - $grid-column;
+         // top: -4 * $leading;  
+      } 
+}
+
+blockquote {
+	position: absolute;
+	margin:{
+         left: 17 * $grid-column;
+         top: -2 * $leading; 
+      } 
+   font-size: 1.5em;
+}
+
+blockquote:nth-of-type(2) {
+	display:none;
 }
