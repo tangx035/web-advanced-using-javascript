@@ -21,6 +21,7 @@ window.onload = function () {
     function showModal(){
         blackModal.style.display = 'block';
         innerModal.style.display = 'block';
+        toggleMenu(); 
     }
     //function to close modal using escape key
     function closeModal(){
@@ -34,25 +35,7 @@ window.onload = function () {
     };
 
     // ---------------- drop down ---------------------
-
-    // var nav = document.querySelector('nav > ul');
-    // nav.style.position = 'absolute';
-    // nav.style.marginTop = '-200px';
-    // var menu = document.getElementsByTagName('li')[8];
-    
-    // function showMenu(){
-    //     nav.style.marginTop = '0px';
-    //     nav.style.transition = 'all 500ms ease-in-out';
-    // }
-    // menu.addEventListener('click', showMenu, false);
-    // nav.addEventListener('mouseover', showMenu, false);
-
-    // function hideMenu(){
-    //     nav.style.position = 'absolute';
-    //     nav.style.marginTop = '-200px';
-    //     nav.style.transition = 'all 500ms ease-in-out';
-    // }
-    // nav.addEventListener('mouseout', hideMenu, false);
+    slideDown();
 
     function slideDown(){
         var nav = document.querySelector('nav > ul');
@@ -89,7 +72,7 @@ window.onload = function () {
         function showMenu(){
             side.style.visibility = 'visible';
             side.style.marginTop = '0px';
-            side.style.marginLeft = '0px';
+            side.style.marginLeft = '0';
             side.style.transition = 'all 500ms ease-in-out';
         }
         menuButton.addEventListener('click', showMenu, false);
