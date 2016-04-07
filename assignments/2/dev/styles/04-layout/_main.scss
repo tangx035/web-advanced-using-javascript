@@ -28,15 +28,38 @@
 	font-size: 20px;
 }
 
-// #exitButton{
+@media only screen and (max-width: 736px){
+    nav > ul{
+    	position: fixed;
+        top: 0;
+        left: -500px;
+        z-index: 20;
+    	transition: left 500ms ease;
+    }
+}
+
+@media only screen and (min-width: 736px){
+    nav > ul{
+    	visibility: hidden;
+    	position: fixed;
+        top: -500px;
+    }
+}
+
+.showSideTray {
+	visibility: visible;
+	position: fixed;
+    top: 0px;
+    left:0px;
+    // transition: left 500ms ease-inandout;
+}
+// .hideSideTray{
+// 	position: fixed;
+// 	left: -500px;
+// 	transition: left 500ms ease-inandout;
+// }
+
+// .menuShown{
 // 	position: absolute;
-// 	top: 0;
-
-// 	margin :{
-// 		left: 70%;
-// 	}
-
-// 	background: black;
-// 	display: none;
-// 	z-index: 20;
+// 	top: 0px;
 // }
