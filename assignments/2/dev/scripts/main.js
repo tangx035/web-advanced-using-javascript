@@ -4,7 +4,7 @@ window.onload = function () {
     //declaring html body
     var body = document.getElementsByTagName('body')[0];
 
-    //modal transparency...check css
+    //modal
     var myModal = document.createElement('div');
     myModal.id = 'myModal';
     body.appendChild(myModal);
@@ -19,9 +19,9 @@ window.onload = function () {
     var modalTextButton = document.getElementsByTagName('li')[9];
     function showModal(){
         document.getElementById('myModal').style.display = 'block';
-        document.getElementById('myModal').style.transitionDuration = '500ms';
+        document.getElementById('myModal').style.transition = '500ms';
         document.getElementById('modalFront').style.display = 'block';
-        document.getElementById('modalFront').style.transitionDuration = '500ms';
+        document.getElementById('modalFront').style.transition = '500ms';
     }
     modalTextButton.addEventListener('click', showModal, false);
 
@@ -30,34 +30,43 @@ window.onload = function () {
         document.getElementById('myModal').style.display = 'none';
         document.getElementById('myModal').style.transitionDuration = '500ms';
         document.getElementById('modalFront').style.display = 'none';
-        document.getElementById('modalFront').style.transitionDuration = '500ms';
+        document.getElementById('modalFront').style.transition = '500ms';
     }
     myModal.addEventListener('click', exitModal, false);
 
-	// menu show and hide
+	//exit modal with key
+    document.onkeydown = function(esc) {
+        if (esc.keyCode == 27) {
+            document.getElementById('myModal').style.visibility = 'hidden';
+            document.getElementById('myModal').style.transition = '500ms';
+            document.getElementById('modalFront').style.visibility = 'hidden';
+            document.getElementById('modalFront').style.transition= '500ms';    
+        }
+    };
+
+	// menu show and menu hide
     var myMenu = document.getElementsByTagName('ul')[0];
     var menuTextButton = document.getElementsByTagName('li')[8];
 
     menuTextButton.onclick = function (){
-        if (menuTextButton.style.visibility !== 'visible'){
+        if (myMenu.style.visibility !== 'visible'){
+            menuTextButton.innerHTML = 'Hide Menu';
+            menuTextButton.style.color = 'white';
             myMenu.style.visibility = 'visible';
             myMenu.style.top = '0';
 
             if (window.innerWidth <= 736){
-                myMenu.classList.add('reveal-nav');
-                window.addEventListener('resize', function(){
+                myMenu.classList.add('shownav');
+                window.addEventListener('resize-window', function(){
                     window.location.reload();
                 });
             }
         } else {
             myMenu.style.visibility = 'hidden';
-            myMenu.style.transitionDuration = '500ms';
+            menuTextButton.innerHTML = 'Show Menu';
+            menuTextButton.style.color = 'white';
+            myMenu.style.transition = '500ms';
         }          
-    };
-
-    menuTextButton.onmouseout = function(){
-        myMenu.style.visibility = 'hidden';
-
     };
 };
 
