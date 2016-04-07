@@ -13,7 +13,7 @@
 
 #modal{
 	position: absolute;
-	top: 0;
+	top: -1000px;
 
 	margin :{
         top: 10%;
@@ -29,8 +29,35 @@
     }
 	width: 60%;
 	height: 50%;
+	// transition : 500ms ease-in;
 	z-index: 20;
 }
 
+@media only screen and (max-width: 736px){
+    nav > ul{
+    	visibility: hidden;
+    	position: fixed;
+        top: 0;
+        left: -500px;
+        z-index: 50;
+    	transition: left 500ms ease-in-out;
+    }
+}
+
+@media only screen and (min-width: 736px){
+    nav > ul{
+    	visibility: hidden;
+    	position: fixed;
+        top: -200px;
+    }
+}
+
+.showSideTray {
+	visibility: visible;
+	position: fixed;
+    top: 80;
+    left: 0;
+    transition: left 500ms ease-in-out;
+}
 
 
