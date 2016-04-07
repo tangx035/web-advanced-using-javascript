@@ -17,6 +17,7 @@ window.onload = function () {
     function showModal(){
         modal.style.display = 'block';
         modaltwo.style.display = 'block';
+
     }
 
     function closeModal(){
@@ -29,7 +30,39 @@ window.onload = function () {
             closeModal();
         }
     };
+
+    var menuB = document.getElementsByTagName('li')[8];
+    var menu = document.getElementsByTagName('ul')[0];
+    menuB.onclick = function(){
+        if(menu.style.visibility !== 'visible'){
+            menu.style.visibility = 'visible';
+            menu.style.position = 'absolute';
+            menu.style.top = '0';
+            menuB.style.color = 'white';
+            menu.style.transition = 'left 500ms ease';
+            if(window.innerWidth <= 736){
+                menu.classList.add('SideTray');
+                window.addEventListener('resize', function(){
+                    window.location.reload();
+                });
+            }
+        }
+else{
+            menu.style.visibility = 'hidden';
+            menuB.style.color = 'white';
+            menu.style.position = 'absolute';
+            menu.style.top = '-500px';
+            menu.style.transition = 'all 500ms ease';	
+        }
+    };
 };
+
+
+
+    
+
+
+
 
 
 
