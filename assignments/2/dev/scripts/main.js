@@ -66,7 +66,7 @@ window.onload = function () {
             menuTextButton.innerHTML = 'Show Menu';
             menuTextButton.style.color = 'white';
             myMenu.style.transition = '500ms';
-        }          
+        }       
     };
 };
 

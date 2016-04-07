@@ -27,16 +27,21 @@
 	z-index: 20;
 }
 
-@media only screen and (max-width: 736px){
+@media screen and (max-width: 736px){
 	nav > ul{
 		position: fixed;
 		top: 0px;
 		left: -300px;
-		z-index: 20;
+		z-index: 30;
+		transition: left 500ms ease;
+	}
+	nav > .shownav{
+	position: absolute;
+	top:0;
+	left: 0;
 	}
 } 
 
-.shownav{
-	position: fixed;
-}
+
+
 
