@@ -2,19 +2,23 @@ header {
    position: fixed;
    top: 0;
    left: 0;
-   height: 30px;
-   // background-color: $color-border;
+   height: 2 * $leading;
+   background-color: $color-border;
    width: 100vw;
    margin: 0 auto;
    clear: both;
+   overflow: visible;
 
    ul {
       position: absolute;
-      right: 20px;
+      right: 40px;
       bottom: 4px;
 
       a {
-         color: $color-nav-links;
+         color: $color-header-links;
+         font-size: 0.8em;
+         text-align: justify;
       }
    }
+
 }
