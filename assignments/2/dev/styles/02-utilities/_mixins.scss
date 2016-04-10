@@ -37,20 +37,3 @@
   }
 }
 
-// @mixin responsive-screen($screen-width) {
-//   @if $screen-width == wide {
-//     @media only screen and (max-width: $width-large) {
-//       @content;
-//     }
-//   } 
-//   // @else if $screen-width < med {
-//   //   @media only screen and (max-width: $width-medium) {
-//   //     @content;
-//   //   }
-//   // } 
-//   // @else if $screen-width == small-screens {
-//   //   @media only screen and (max-width: $width-small) {
-//   //     @content;
-//   //   }
-//   // }
-// }
