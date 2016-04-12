@@ -43,7 +43,7 @@ window.onload = function () {
                 navigationPanel.classList.add('nav-open');
             }
         }
-    }
+    };
     var toggleModal = function(state){
         var modalPanel = document.querySelector('.modal-panel');
         if( modalPanel.style.display === ''){
