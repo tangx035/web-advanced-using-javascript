@@ -1,0 +1,22 @@
+nav{
+   @media screen and (max-width: 736px) {
+      width:auto;
+      justify-content: flex-start;
+      ul{
+         top: 0;
+         left: -1* ($width-nav-item + $padding-offset);
+         >li{
+            float: none;
+            ul{
+               top: 0px;
+               left: $width-nav-item;
+            }
+         }
+      }
+   }
+}
+nav ul.nav-open{
+   @media screen and (max-width: 736px) {
+      left: -1* $padding-offset;
+   }
+}
