@@ -1,10 +1,11 @@
+
 nav {
    width: 100%;
    position: fixed;
    display: flex;
    flex-flow: row nowrap;
    justify-content: center;
-   top: $height-nav-item * -1;
+   
    //width: $width-nav;
    height: $height-nav-item;
    a {
@@ -27,13 +28,16 @@ nav {
    a:hover {
       background-color: $color-border;
    }
-
+   ul.nav-open{
+      top: 0;
+   }
    ul {
       position: relative;
       margin: 0 auto;
       padding: 0;
       list-style-type: none;
-
+      top: ($height-nav-item + 2) * -1; 
+      transition: all 250ms;
       > li {
          // Float each top-level list item (“Menu 1” and “Menu 2”) next to each
          // other.

@@ -7,6 +7,11 @@
 window.onload = function () {
     'use strict';
 
+    var menuButton = document.querySelector('#js-triggers li:first-of-type a');
+    menuButton.addEventListener('click',function(e){
+        e.preventDefault();
+        toggleMenu();
+    },false);
 
     var modalButton = document.querySelector('#js-triggers li:last-of-type a');
     modalButton.addEventListener('click',function(e){
@@ -20,7 +25,17 @@ window.onload = function () {
             toggleModal(false);
     	}
     };
-
+    var toggleMenu = function(state){
+        var navigationPanel = document.querySelector('nav>ul');
+        if( state === undefined || state === null ){
+            if ( navigationPanel.classList.contains('nav-open') ){
+                navigationPanel.classList.remove('nav-open');
+            }else{
+                navigationPanel.classList.add('nav-open');
+            }
+            
+        }
+    }
     var toggleModal = function(state){
         var modalPanel = document.querySelector('.modal-panel');
         if( modalPanel.style.display === ''){
@@ -29,7 +44,7 @@ window.onload = function () {
         var modalPanelContent = modalPanel.querySelector('.modal-content');
         //handling the state and toggling
         if( state === undefined || state === null ){
-            // to avoid duplicates of click handler, remove them everytime 
+            // to avoid duplicates of click handler, remove them every time 
             // that new one wants to get added
             modalPanelContent.removeEventListener('click',modalPanelContentClickHandler);
             modalPanelContent.addEventListener('click',modalPanelContentClickHandler,false);
