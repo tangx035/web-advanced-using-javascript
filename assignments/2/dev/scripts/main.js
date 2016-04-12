@@ -34,6 +34,14 @@ window.onload = function () {
                 navigationPanel.classList.add('nav-open');
             }
             
+        }else if( state === false ){
+            if ( navigationPanel.classList.contains('nav-open') ){
+                navigationPanel.classList.remove('nav-open');
+            }
+        }else if ( state === true ){
+            if ( !navigationPanel.classList.contains('nav-open') ){
+                navigationPanel.classList.add('nav-open');
+            }
         }
     }
     var toggleModal = function(state){
@@ -54,6 +62,7 @@ window.onload = function () {
             if( modalPanel.style.display == 'none'){
                 //disbale body scroll temporarily
                 document.body.classList.add('modal-panel-is-open');
+                toggleMenu(false);//closing the menu
                 modalPanel.style.display = 'flex';
             }else{
                 //enable body scroll
@@ -66,6 +75,7 @@ window.onload = function () {
             document.body.classList.remove('modal-panel-is-open');
             modalPanel.style.display = 'none';
         }else if ( state === true ){//only opening
+            toggleMenu(false);//closing the menu
             modalPanelContent.addEventListener('click',modalPanelContentClickHandler,false);
             modalPanel.addEventListener('click',modalPanelClickHandler,false);
             document.body.classList.add('modal-panel-is-open');
