@@ -1,15 +1,12 @@
 {
-  "name": "assignment-2",
+  "name": "assignment-2/nima",
   "version": "1.0.0",
-  "description": "An automation template for HTML, CSS, Sass, and JavaScript used by the Web Advanced Using JavaScript course at Parsons School of Design.",
+  "description": "assignment-2 gulp",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/code-warrior/web-advanced-using-javascript.git"
-  },
+
   "keywords": [
     "gulp",
     "automation",
@@ -20,21 +17,11 @@
     "javascript",
     "web-advanced",
     "javascript",
-    "parsons"
+    "parsons",
+    "nimabeh"
   ],
-  "author": "Roy Vanegas",
   "license": "ISC",
-  "contributors": [
-    {
-      "name": "Roy Vanegas",
-      "email": "roy@thecodeeducators.com",
-      "url": "http://roy.vanegas.org"
-    }
-  ],
-  "bugs": {
-    "url": "https://github.com/code-warrior/web-advanced-using-javascript/issues"
-  },
-  "homepage": "https://github.com/code-warrior/web-advanced-using-javascript#readme",
+
   "devDependencies": {
     "browser-sync": "^2.10.1",
     "del": "^2.2.0",
