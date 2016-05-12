@@ -1,0 +1,7 @@
+main {
+    position: absolute;
+    left: 2 * $grid-gutter-full - $grid-gutter;
+    top: 2 * $leading;
+    border-top: 2px;
+    height: 20 * $leading;
+}

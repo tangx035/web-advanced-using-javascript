@@ -1,0 +1,88 @@
+nav {
+   position: absolute;
+   z-index: 1;
+   top: 2 * $leading;
+   left: 10 * $grid-gutter-full + $grid-gutter;   
+   margin: {
+      top: -100px;
+   }
+ 
+   @include responsive-screen(med) {
+      left: 0px;
+      z-index: 1;
+      margin: {
+         top: 0px;
+         left: -120px;
+         }
+   }
+   width: $width-nav;
+   height: $height-nav-item;
+   
+   a {
+      display: block;
+      z-index: 1;
+      border: $width-border solid $color-border-nav;
+      color: $color-nav-links;
+      text-align: center;
+      width: $width-nav-item - ( 2 * $width-border );
+      line-height: $height-nav-item;
+      font-size: 0.9em;
+   }
+
+   &.reveal-top-menu {
+      z-index: 1;
+      transition: margin-top linear .5s;
+      margin: {
+         top: 0px;
+      }  
+   }
+
+   &.reveal-side-menu {
+      z-index: 1;
+      transition: margin-left linear .5s;
+      margin: {
+        left: 0px;
+      }  
+   }
+
+   a:hover {
+      background-color: $color-border;
+      z-index: 1;
+   }
+
+   ul {
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+      z-index: 1;
+      
+      > li {
+         float: left;
+         width: $width-nav-item;
+         font-size: 0.9em;
+         z-index: 1;
+         position: relative;
+         background-color: $color-background-nav;
+
+         ul {
+            visibility: hidden;
+            z-index: 1;
+            position: absolute;
+            top: $height-nav-item + ( 2 * $width-border );
+            left: 0;
+
+            a {
+               z-index: 1;
+            }
+         }
+      }
+
+      > li:hover {
+         z-index: 1;
+         ul {
+            visibility: visible;
+            z-index: 1;
+         }
+      }
+   }
+}

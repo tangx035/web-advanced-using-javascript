@@ -1,0 +1,39 @@
+@mixin transition($property: all, $duration: 1s,
+   $timing_function: ease-out, $delay: 0s) {
+  -webkit-transition: $property $duration $timing_function $delay;
+     -moz-transition: $property $duration $timing_function $delay;
+       -o-transition: $property $duration $timing_function $delay;
+          transition: $property $duration $timing_function $delay;
+}
+
+// ============================================================================
+// RESPONSIVE
+//
+// This mixin works in tandem with variables defines in the file
+// `_global-variables.scss`, and accepts the following values for the
+// $screen-width parameter:
+//
+//    wide-screens, which maps to $width-large (1280px)
+//    medium-screens, which maps to $width-medium (736px)
+//    small-screens, which maps to $width-small (400px)
+//
+// ============================================================================
+
+@mixin responsive-screen($screen-width) {
+  @if $screen-width == wide {
+    @media only screen and (max-width: $width-large) {
+      @content;
+    }
+  } 
+  @else if $screen-width == med {
+    @media only screen and (max-width: $width-medium) {
+      @content;
+    }
+  } 
+  @else if $screen-width == small-screens {
+    @media only screen and (max-width: $width-small) {
+      @content;
+    }
+  }
+}
+

@@ -1,0 +1,52 @@
+#overlay {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    top: 0px;
+    left: -100px;
+    
+
+    &.modal {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100vw;
+        height: 100vh;
+        z-index: 100;
+        background-color: rgba(153,153,153,0.7);
+       
+    }
+}
+
+
+div.inner {
+    position: relative;
+    margin: 0 auto 0 auto;
+    margin-top: 20px;
+    z-index: 200;
+    text-align: center;
+
+    ul {
+        position: relative;
+        width: 100px;
+        z-index: 200;
+
+        a {
+            color: white;
+            font-size: 0.8em;
+            z-index: 200;
+            padding-left: 20px;
+        }
+    }
+}
+
+#square {
+    position: fixed;
+    background-color: $color-square;
+    top: 2 * $leading;
+    left: 2 * $grid-gutter-full - 2 * $grid-gutter;
+    height: 5 * $grid-gutter-full + 4 * $grid-gutter;
+    width: 100vw;
+    margin: 0 auto;
+    z-index: -1;
+}
