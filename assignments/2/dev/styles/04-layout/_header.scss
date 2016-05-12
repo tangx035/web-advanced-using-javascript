@@ -1,0 +1,114 @@
+// header {
+//    position: fixed;
+//    top: 0;
+//    left: 0;
+//    height: 80px;
+//    background-color: $color-border;
+//    width: 100vw;
+//    margin: 0 auto;
+//    clear: both;
+
+//    ul {
+//       position: absolute;
+//       right: 20px;
+//       bottom: 4px;
+
+//       a {
+//          color: $color-nav-links;
+//       }
+//    }
+// }
+
+// =================================================================================
+// header
+// =================================================================================
+$icon-width-height: 0.4 * $grid-width;
+$menu-icon-height: 1 * $leading;
+
+@mixin transition ($property: all, $duration: 0.2s, 
+   $timing_function: ease-in, $delay: 0.3s){
+   -webkit-transition: $property $duration $timing_function $delay;
+   -moz-transition: $property $duration $timing_function $delay;
+   -o-transition: $property $duration $timing_function $delay;
+   transition: $property $duration $timing_function $delay;
+}
+
+header {
+   margin: 0;
+   position: fixed;
+   max-width: $width-body;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 3 * $leading;
+   background-color: rgba(242, 242, 242, 0.8);
+   z-index: 2;
+   // @media screen and (max-width: $width-medium) {
+ //      width: $width-medium;
+ //   }
+   // @media screen and (max-width: $width-small) {
+ //      width: $width-small;
+ //   }
+}
+
+// =================================================================================
+// js: drop down menu button.
+// =================================================================================
+#js-triggers li:nth-child(2) {
+   float: right;
+   position: fixed;
+   right: 1.8 * ($grid-width + $grid-gutter);
+   top: 0.8 * $leading;
+   padding: (0.2 * $leading 1 * $leading) ;
+   background-color: rgb(10, 10, 10);
+   border-radius:  1.5 * $grid-gutter;
+   z-index: 3;
+   cursor: pointer;
+}
+
+#js-triggers li:nth-child(2):hover{
+   background-color: white;
+   @include transition;   
+}
+
+// =================================================================================
+// first modal button.
+// =================================================================================
+
+#js-triggers li:nth-child(1) {
+   float: right;
+   position: fixed;
+   top: 0.8 * $leading;
+   right: 1 * $grid-gutter;
+   padding: (0.2 * $leading 1.2 * $leading);
+   background-color: rgb(10, 10, 10);
+   border-radius:  1.5 * $grid-gutter;
+   z-index: 5;
+   cursor: pointer;   
+}
+
+#js-triggers li:nth-child(1):hover{
+   background-color: white;
+   @include transition;   
+}
+
+.side-tray-btn {
+   position: absolute;
+   top: 1.05 * $leading;
+   left: 1.4 * $grid-gutter;
+   cursor: pointer;
+}
+
+.side-tray-btn img {
+   width: $icon-width-height;
+}
+
+.side-tray-container {
+   position: fixed;
+   background-color: rgba(130, 227, 152, 1);
+   width: 3 * ($grid-width + $grid-gutter);
+   height: 100%;
+   left: -3 * ($grid-width + $grid-gutter); // set position hide to the left.
+   z-index: 3;
+   @include transition;
+}

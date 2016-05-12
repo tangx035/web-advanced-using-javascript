@@ -1,0 +1,81 @@
+nav {
+   display: none;
+   position: fixed;
+   top: 2.4 * $leading;
+   right: 1 * $grid-gutter;
+   max-width: $width-body;
+   width: $width-nav;
+   height: 100%;
+   cursor: pointer;
+   z-index: 5;
+
+   @media screen and (max-width: $width-special) {
+      left: 0;
+      top: 0;
+      height: 100%;
+      background-color: $color-background-nav;   
+      @include transition;   
+  
+   }
+
+   a {
+      display: block;
+      color: $color-nav-links;
+      text-align: center;
+
+      width: $width-nav-item;
+      line-height: $height-nav-item;
+   }
+
+   a:hover {
+   }
+
+   > ul {
+      position: absolute;      
+      list-style-type: none;
+      width: 5 * $grid-width;
+      @media screen and (max-width: $width-special) {
+         top: 3 * $leading;
+         width: 6 * $grid-width;
+         height: 3 * $leading;
+      }      
+
+      > li {
+         position: relative;
+         display: block;
+         left: 1.85 * $grid-width;
+         width: $width-nav-item;
+         margin-bottom: 0.3 * $leading;
+         border-radius: $grid-width;
+         background-color: $color-background-nav;
+         @media screen and (max-width: $width-special) {
+            left: 0;
+         }             
+
+         > ul {
+            position: absolute;
+            opacity: 0;
+            visibility: hidden;
+            height: 5 * $leading;
+            top: 0 * $leading;
+            right: 2.05 * $grid-width;
+            @media screen and (max-width: $width-special) {
+               left: 1.5 * $grid-width;
+            }                  
+
+            > li {
+               border-radius: $grid-width;
+               background-color: $color-background-nav;
+               margin-bottom: 0.305 * $leading;                 
+            }  
+         }//end: ul
+      }//end: li
+
+      > li:hover {
+          ul {
+            visibility: visible;
+            @include transition;   
+         }
+      }
+   }
+}
