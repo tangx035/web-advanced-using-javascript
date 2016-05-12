@@ -1,0 +1,51 @@
+#transparentModal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: $fullscreen-width;
+	height: $fullscreen-height;
+	background: rgba(0, 0, 0, 0.6);
+	visibility: hidden;
+	z-index: 50;
+}
+
+#topModal{
+	position: absolute;
+	margin: auto;
+	top: 0;
+	right: 0;
+  	bottom: 0;
+  	left: 0;
+	padding: 50px;
+	width: $fullscreen-width/2;
+	height: $fullscreen-height/2;
+	background-color: white;
+	font-size: 30px;
+	color: #000;
+	visibility: hidden;
+	z-index: 100;
+}
+
+@media only screen and (max-width: 736px){
+	nav > ul{
+		position: fixed;
+		top: 0px;
+		left: -300px;
+		z-index: 20;
+		transition: left 500ms ease;
+	}
+} 
+
+.reveal-nav{
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+// .hide-nav{
+// 	position: fixed;
+// 	top: 0;
+// 	left: -300px;
+// }
+
+
