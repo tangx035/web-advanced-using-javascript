@@ -1,0 +1,49 @@
+//
+// Modules
+//
+// Smaller components, such as selector modifiers (classes, IDs, attribute selectors,
+// etc), belong here.
+//
+
+////////////////
+// MODAL SECTION
+////////////////
+.modal-panel{
+	position: fixed;
+	display: none;
+	z-index: 640;
+	width: 100vw;
+	height: 100vh;
+	top: 0px;
+	left: 0px;
+	flex-direction: row;
+	justify-content: center;
+    resize: vertical;
+	background:{
+		color: rgba(0,0,0,0.87);
+	}
+	& .modal-content-pane{
+		width:80vw;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+	    justify-content: center;
+     	resize: vertical;
+
+		& .modal-content{
+			height: 80vh;
+			background:{
+				color: white;
+			}
+			resize: vertical;
+		}
+
+	}
+	& .modal-control-pane{
+		width:10vw;
+		height: 100vh;
+	}
+
+}
+
+
