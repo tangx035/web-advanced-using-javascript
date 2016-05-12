@@ -1,0 +1,266 @@
+/*
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,700&subset=latin,latin-ext");
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+a, abbr, address, article, aside, audio, b, blockquote, body, canvas, caption, cite,
+code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure,
+footer, form, h1, h2, h3, h4, h5, h6, header, html, i, iframe, img, ins, kbd, label,
+legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, section, samp,
+small, span, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr,
+ul, var, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1;
+  font-family: 'Open Sans', sans-serif; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+#column-baseline-grid {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3111px; }
+
+.all-grids {
+  background-image: url("../img/focus_website.png"), linear-gradient(90deg, rgba(200, 0, 0, 0.2) 75px, transparent 0px), linear-gradient(0deg, transparent 95%, rgba(56, 255, 255, 0.8) 100%);
+  background-position: center top, 0% 0%, 0% 0%;
+  background-size: auto auto, 100px 100%, 100% 24px;
+  background-attachment: scroll, fixed, fixed;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-color: transparent, transparent, transparent; }
+
+.modular-grid {
+  background-image: linear-gradient(90deg, rgba(200, 0, 0, 0.2) 75px, transparent 0px), linear-gradient(0deg, transparent 95%, rgba(56, 255, 255, 0.8) 100%);
+  background-size: 100px 100%, 100% 24px; }
+
+.column-grid {
+  background-image: linear-gradient(90deg, rgba(200, 0, 0, 0.2) 75px, transparent 0px);
+  background-size: 100px 100%; }
+
+.baseline-grid {
+  background-image: linear-gradient(0deg, transparent 95%, rgba(56, 255, 255, 0.8) 100%);
+  background-size: 100% 24px; }
+
+.user-supplied-bg-image {
+  background-image: url("../img/focus_website.png");
+  background-position: center top;
+  background-size: auto auto;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-color: transparent; }
+
+h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 60px;
+  color: #000; }
+
+h2 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-size: 36px;
+  color: #000; }
+
+h3 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  color: #262626;
+  padding-bottom: 24px; }
+
+p {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 14.11765px;
+  color: #595959;
+  line-height: 24px; }
+
+#top-banner {
+  background-image: url(../img/large-banner-image.png);
+  background-repeat: none;
+  margin: 0 auto;
+  width: 100vw;
+  height: 700px; }
+
+#logos {
+  width: 800px; }
+
+#focus-icon {
+  position: absolute;
+  top: 117.6px;
+  left: 600px;
+  display: inline; }
+
+#main-title {
+  position: absolute;
+  top: 120px;
+  left: 688px;
+  text-align: center;
+  display: inline; }
+
+#tagline {
+  position: absolute;
+  top: 240px;
+  left: 400px;
+  text-align: center; }
+
+#arrow {
+  position: absolute;
+  margin: 0 auto;
+  top: 330px;
+  left: 694px; }
+
+#features {
+  position: relative;
+  width: 100vw;
+  height: 499.2px; }
+
+#iphone {
+  position: absolute;
+  top: 404px;
+  left: 540px;
+  z-index: 10; }
+
+#feature-1 {
+  position: absolute;
+  top: 48px;
+  left: 190px;
+  width: 290px; }
+
+#feature-2 {
+  position: absolute;
+  top: 240px;
+  left: 190px;
+  width: 290px; }
+
+#feature-3 {
+  position: absolute;
+  top: 48px;
+  left: 950px;
+  width: 290px; }
+
+#feature-4 {
+  position: absolute;
+  top: 240px;
+  left: 950px;
+  width: 290px; }
+
+#media {
+  width: 100vw;
+  height: 362.4px;
+  background-image: url(../img/container.png);
+  background-repeat: none;
+  position: relative;
+  padding-top: 60px;
+  padding-left: 130px; }
+
+#media p {
+  width: 520px; }
+
+#icons img {
+  position: relative;
+  display: inline;
+  padding-top: 24px;
+  padding-right: 13px; }
+
+#video {
+  position: absolute;
+  display: inline;
+  top: 24px;
+  right: 264px;
+  width: 500px;
+  height: 307px; }
+
+#video-play-bar {
+  position: relative;
+  top: 292.8px;
+  right: -25px; }
+
+#video-play-button {
+  position: relative;
+  top: 292.8px;
+  display: inline;
+  left: 20px; }
+
+#testimonials {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100vw;
+  height: 672px;
+  padding-top: 60px;
+  text-align: center; }
+
+#testimonials h3 {
+  font-weight: 300; }
+
+#testimonials p {
+  line-height: 12px; }
+
+#collage {
+  position: relative;
+  background-image: url(../img/people.png);
+  background-repeat: none;
+  position: relative;
+  max-width: 100vw;
+  height: 316.8px;
+  top: 52.8px; }
+
+#collage img {
+  position: relative;
+  left: 234.4px;
+  top: 79.2px; }
+
+#in-touch {
+  position: relative;
+  margin-top: 127.2px; }
+
+#in-touch h3 {
+  font-weight: 600; }
+
+#in-touch p {
+  line-height: 24px; }
+
+#social-media {
+  position: relative;
+  top: 7.74194px;
+  display: inline; }
+
+#social-media img {
+  padding-right: 7.5px; }
+
+.footer {
+  background-color: #e3e3e3;
+  width: 100vw;
+  height: 88.8px;
+  text-align: center;
+  padding-top: 74px; }
+
+.footer span {
+  padding-right: 33.6px;
+  display: inline; }
+
+/*# sourceMappingURL=style.css.map */
