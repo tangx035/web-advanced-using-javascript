@@ -1,0 +1,96 @@
+// header {
+//    position: fixed;
+//    top: 0;
+//    left: 0;
+//    height: 80px;
+//    background-color: $color-border;
+//    width: 100vw;
+//    margin: 0 auto;
+//    clear: both;
+
+//    ul {
+//       position: absolute;
+//       right: 20px;
+//       bottom: 4px;
+
+//       a {
+//          color: $color-nav-links;
+//       }
+//    }
+// }
+
+// =================================================================================
+// header
+// =================================================================================
+$icon-width-height: 0.4 * $grid-width;
+$menu-icon-height: 1 * $leading;
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Great+Vibes);
+
+@mixin transition ($property: all, $duration: 0.2s, 
+   $timing_function: ease-in, $delay: 0.3s){
+   -webkit-transition: $property $duration $timing_function $delay;
+   -moz-transition: $property $duration $timing_function $delay;
+   -o-transition: $property $duration $timing_function $delay;
+   transition: $property $duration $timing_function $delay;
+}
+
+
+//////////////start from here////////////
+
+
+header {
+   font-family: 'Open Sans', sans-serif;
+   height: 70px;
+   width: 100vw;
+   background-color: white;
+   position: fixed;
+   top: 0px;
+   left: 0px;
+   z-index: 99;
+}
+#container {
+   display: none;
+}
+
+
+
+// =================================================================================
+// js: drop down menu button.
+// // =================================================================================
+// #js-triggers li:nth-child(2) {
+//   // float: right;
+//   // position: fixed;
+//   // right: 1.8 * ($grid-width + $grid-gutter);
+//   // top: 0.8 * $leading;
+//   // padding: (0.2 * $leading 1 * $leading) ;
+//   // background-color: rgb(10, 10, 10);
+//   // border-radius:  1.5 * $grid-gutter;
+//   // z-index: 3;
+//   //  cursor: pointer;
+// }
+
+// #js-triggers li:nth-child(2):hover{
+//    background-color: white;
+// }
+
+// =================================================================================
+// first modal button.
+// =================================================================================
+
+// #js-triggers li:nth-child(1) {
+//   // float: right;
+//   // position: fixed;
+//   // top: 0.8 * $leading;
+//   // right: 1 * $grid-gutter;
+//   // padding: (0.2 * $leading 1.2 * $leading);
+//   // background-color: rgb(10, 10, 10);
+//   // border-radius:  1.5 * $grid-gutter;
+//    z-index: 5;
+//    cursor: pointer;
+// }
+
+// #js-triggers li:nth-child(1):hover{
+//    background-color: white;
+// }

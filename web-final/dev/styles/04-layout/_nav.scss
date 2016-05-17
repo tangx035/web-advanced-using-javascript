@@ -1,0 +1,53 @@
+nav {
+   position: fixed;
+   top: 30px;
+   left: 25vw;
+   max-width: $width-body;
+   // height: 100%;
+
+
+   // @media screen and (max-width: $width-special) {
+   //    left: 0;
+   //    top: 0;
+   //    height: 100%;
+   //    background-color: $color-background-nav;     
+   // }
+
+   .navgation {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 0.95em; 
+      color:black;
+      margin-left: 80px;
+      margin-top: 5px;
+      display: inline;
+   }
+   #works p { 
+      font-family: $Exo;
+   }
+
+   
+   a {
+      transition: background-color 0.8s, color 0.8s;
+      color: #636363;
+      letter-spacing: 1.5px;
+      text-decoration: none;
+   }
+
+
+a:hover {
+   background-color: black;
+   color: white;
+}
+   #logo {
+   font-family: 'Great Vibes', cursive;
+   font-size: 1.8em;
+   position: fixed;
+   top:  15px;
+   left: 15px;
+   }
+  #aya a {
+      text-decoration: none;
+   }
+}
+
+

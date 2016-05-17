@@ -1,0 +1,153 @@
+// for javascript interaction contents.
+$icon-width-height: 0.4 * $grid-width;
+$menu-icon-height: 1 * $leading;
+
+
+// @mixin transition ($property: all, $duration: 1s, 
+// 	$timing_function: ease-out, $delay: 0s){
+// 	-webkit-transition: $property $duration $timing_function $delay;
+// 	-moz-transition: $property $duration $timing_function $delay;
+// 	-o-transition: $property $duration $timing_function $delay;
+// 	transition: $property $duration $timing_function $delay;
+// }
+
+////main
+
+main {
+  width: $width-body*1.13;
+
+   #blank {
+    height:934px;
+    width: $width-body*1.13;
+   }
+
+   #blank img {
+    width: 100%;
+    padding-left: 0vw;
+   }
+
+   // > #blank img  {
+   //   margin:0px;
+   //   background-repeat:no-repeat;
+   //   top:0px;
+   //   left:0px;
+   //   position:fixed;
+   //   z-index:-1;
+   // }
+   #main_back {
+       width: $width-body*1.13;
+       height: 825px;
+
+   }
+   #main_back img  {
+       width: 100%;
+       position:fixed;
+       background-size:cover;
+       z-index:-2;
+   }
+      //background: 5% 50% no-repeat;
+
+   #work_part {
+     background-color: black;
+     height:1500px;
+   
+   }
+
+   #works {
+    margin: 0;
+    padding: 0;
+    display:inline; /* Safari */
+
+   }
+
+   #works img{
+     // postion: absolute;
+      width: 49.85%;
+      height: 33.33%;
+      opacity: 1;
+     // position: relative;
+      z-index: 1;
+      padding-bottom: 4px;
+      overflow: auto;
+      transition: all 0.3s;
+      display: inline-block;
+      margin-left: auto;
+      margin-right: auto;
+   }
+
+   #works img:hover {
+    width: 48%;
+    height:33%;
+    opacity:0.3;
+
+   }
+   #works p {
+    
+   }
+   .home_text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em; 
+    color: white;
+    display: inline;
+    position: absolute;
+    text-align: center;
+    margin-left: 320px;
+    margin-top: 30px;
+    letter-spacing: 1px;
+   }
+
+/************************************************/
+/////////works.html////////
+#aha_sound p{
+}
+#title_image img{
+    width: $width-body*1.13;
+    height: 330px;
+}
+#title_sound {
+  font-size:50px;
+  padding:60px;
+  font-family: $Exo;
+  color:black;
+  text-align: center;
+
+}
+ #statement {
+    width:  $width-body*0.5;
+    line-height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+}
+#ms2_image {
+   margin: 50px 300px;
+}
+#andrew {
+  width: 60vw;
+  margin-left: auto;
+  margin-top: 30px;
+}
+#hands {
+    width:50vw;
+    margin-left:80px;
+  //  border:1px solid black;
+
+  }
+  iframe {
+    width:60vw;
+    height: 550px;
+    margin-top: 60px;
+  //  margin-left: 50px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+}
