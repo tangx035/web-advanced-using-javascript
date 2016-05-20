@@ -1,0 +1,74 @@
+nav {
+   display: none;
+   position: fixed;
+   top: 2.4 * $leading;
+   max-width: $width-body;
+   width: 1.1 * $width-nav;
+   height: 100%;
+   cursor: pointer;
+   z-index: 5;
+
+   @media screen and (max-width: $width-special) {
+      left: 0;
+      top: 0;
+      height: 100%;
+      background-color: rgba(0,0,0,0.3);   
+   }
+
+   a {
+      display: block;
+      text-align: center;
+
+      width: $width-nav-item;
+      line-height: $height-nav-item;
+   }
+
+   a:hover {
+   }
+
+   > ul {
+      position: absolute;      
+      list-style-type: none;
+      width: 5 * $grid-width;
+      @media screen and (max-width: $width-special) {
+         top: 3 * $leading;
+         width: 6 * $grid-width;
+         height: 3 * $leading;
+      }      
+
+      > li {
+         position: relative;
+         display: block;
+         left: 9.25 * $grid-width;
+         width: 0.9*$width-nav-item;
+         margin-bottom: 0.8 * $leading;
+         background-color: #6b4767;
+         @media screen and (max-width: $width-special) {
+            left: 0.2 * $grid-width;
+         }             
+
+         > ul {
+            position: absolute;
+            visibility: hidden;
+            width: 0.5*$width-nav-item;
+            height: 5 * $leading;
+            top: 0 * $leading;
+            left: 2.7 * $grid-width;
+            @media screen and (max-width: $width-special) {
+               left: 2.6 * $grid-width;
+            }                  
+
+            > li {
+               background-color:#6b4767;
+               margin-left: -0.5*$width-nav-item;
+               margin-bottom: 0.305 * $leading;                 
+            }  
+         }
+      }
+      > li:hover {
+          ul {
+            visibility: visible;
+         }
+      }
+   }
+}

@@ -1,0 +1,57 @@
+body {
+   font-size: 1.1rem;
+   font-family: 'Crimson Text', serif;
+   margin: 0 auto;
+   padding: 0 8px;
+}
+
+$icon-width-height: 0.4 * $grid-width;
+$menu-icon-height: 3 * $leading;
+
+.first-modal {
+	display: none;
+	position: fixed;
+	left: 0; 
+	top: 0;
+	width: 100%;
+	height: 80%;
+	background-color: rgba(120,100,120, 0.7);
+	z-index: 6;
+}
+
+.first-modal-content {
+	color: white;
+	margin-top:10* $leading;
+	margin-left:1.5*($grid-width + $grid-gutter);
+	width: 9 * ($grid-width + $grid-gutter);
+	@media screen and (max-width: $width-medium) {
+    	width: 6 * ($grid-width + $grid-gutter);
+  	}
+	@media screen and (max-width: $width-small) {
+    	width: 5 * ($grid-width + $grid-gutter);
+  	}
+}
+
+// .first-modal-content p {
+// 	line-height: 1.2 * $leading;
+	
+// 	@media screen and (max-width: $width-medium) {
+// 		font-size: 0.64 * $leading;
+//     	line-height: 1 * $leading;
+//   	}
+// 	@media screen and (max-width: $width-small) {
+//     	font-size: 0.6 * $leading;
+//     	line-height: 1 * $leading;
+//     }
+// }
+
+// .gap {
+// 	height: 10.1 * $leading;
+// }
+
+main {
+	position: absolute;
+	left: 5 * $grid-gutter;
+	right: 8 * $grid-gutter;
+	top: 6.5 * $leading;
+}
